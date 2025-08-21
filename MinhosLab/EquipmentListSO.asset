@@ -14,27 +14,117 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equipmentList:
     _keyValueList:
-    - key: KnightCrown
-      value: Chr_HelmetAttachment_08
-    - key: HelmofOblivion
-      value: Chr_HelmetAttachment_11
-    - key: glasses of magician
-      value: Chr_HelmetAttachment_03
-    - key: CrownofEternity
-      value: Chr_HelmetAttachment_03
-    - key: Full Plate of Oblivion
-      value: Chr_Torso_Male_19
-    - key: SikasHorn
-      value: Chr_HelmetAttachment_04
-    - key: RealionMask
-      value: Chr_Head_No_Elements_Male_02
-    - key: PolugeDOCmask
-      value: Chr_Head_No_Elements_Male_01
-    - key: DKnightMask
-      value: Chr_HelmetAttachment_01
-    - key: RoyalCloser
-      value: Chr_Torso_Male_04
-    - key: RealionArmor
-      value: Chr_Torso_Male_23
+    - key: SimpleIsBest
+      value: Chr_Torso_Male_01
+    - key: BossBandit
+      value: Chr_Torso_Male_02
+    - key: App_Hunters_Jarket
+      value: Chr_Torso_Male_06
+    - key: Assasins Cloak
+      value: Chr_Torso_Male_25
     - key: BanditsArmor
       value: Chr_Torso_Male_11
+    - key: Blacksmith
+      value: Chr_Torso_Male_13
+    - key: Chipao
+      value: Chr_Torso_Male_05
+    - key: GeniousClub
+      value: Chr_Torso_Male_08
+    - key: HomeProtecter
+      value: Chr_Torso_Male_28
+    - key: Master
+      value: Chr_Torso_Male_26
+    - key: Musician
+      value: Chr_Torso_Male_09
+    - key: Pro_Hunters_Jarket
+      value: Chr_Torso_Male_07
+    - key: ProBlackSmith
+      value: Chr_Torso_Male_17
+    - key: RealionArmor
+      value: Chr_Torso_Male_23
+    - key: Royal_Agents_Jarket
+      value: Chr_Torso_Male_09
+    - key: Royal_AssertArmy
+      value: Chr_Torso_Male_21
+    - key: Royal_BowArmy
+      value: Chr_Torso_Male_22
+    - key: Royal_Defenders_Armor
+      value: Chr_Torso_Male_20
+    - key: Royal_Instructor
+      value: Chr_Torso_Male_15
+    - key: Royal_MasterArmy
+      value: Chr_Torso_Male_24
+    - key: RoyalCloser
+      value: Chr_Torso_Male_04
+    - key: TempleKnight
+      value: Chr_Torso_Male_10
+    - key: ThronKnights_Armor
+      value: Chr_Torso_Male_16
+    - key: TradeOfficers_Jarket
+      value: Chr_Torso_Male_03
+    - key: Trinity_Agent
+      value: Chr_Torso_Male_19
+    - key: Wandering_Merchant
+      value: Chr_Torso_Male_27
+    - key: WildHunters_Armor
+      value: Chr_Torso_Male_12
+    - key: --------------
+      value: --------------
+    - key: App_Hunters_Pants
+      value: Chr_Hips_Male_00
+    - key: Blacksmith_Pants
+      value: Chr_Hips_Male_13
+    - key: Chipao_Pants
+      value: Chr_Hips_Male_05
+    - key: HomeProtecter_Pants
+      value: Chr_Hips_Male_28
+    - key: Master_Pants
+      value: Chr_Hips_Male_26
+    - key: Pro_Hunters_Pants
+      value: Chr_Hips_Male_07
+    - key: ProBlackSmith_Pants
+      value: Chr_Hips_Male_17
+    - key: Royal_Agents_Pants
+      value: Chr_Hips_Male_09
+    - key: Royal_AssertArmy_Pants
+      value: Chr_Hips_Male_21
+    - key: Royal_BowArmy_Pants
+      value: Chr_Hips_Male_22
+    - key: Royal_Defenders_Pants
+      value: Chr_Hips_Male_20
+    - key: Royal_Instructor_Pants
+      value: Chr_Hips_Male_15
+    - key: Royal_MasterArmy_Pants
+      value: Chr_Hips_Male_24
+    - key: ThronKnights_Pants
+      value: Chr_Hips_Male_16
+    - key: TradeOfficers_Pants
+      value: Chr_Hips_Male_03
+    - key: Trinity_Agent_Pants
+      value: Chr_Hips_Male_19
+    - key: Wandering_Merchant_Pants
+      value: Chr_Hips_Male_27
+    - key: WildHunters_Pants
+      value: Chr_Hips_Male_12
+    - key: DragoneArcher_Head
+      value: Chr_HelmetAttachment_02
+    - key: DragoneKnights_Head
+      value: Chr_HelmetAttachment_01
+    - key: WHY?
+      value: Chr_HelmetAttachment_03
+    - key: HornKnights_Head
+      value: Chr_HelmetAttachment_06
+    - key: IronHorn_Head
+      value: Chr_HelmetAttachment_07
+    - key: IronKingsCrown_Head
+      value: Chr_HelmetAttachment_08
+    - key: IronTempleCrown_Head
+      value: Chr_HelmetAttachment_09
+    - key: Kanival_Head
+      value: Chr_HelmetAttachment_10
+    - key: MasterKanival_Head
+      value: Chr_HelmetAttachment_05
+    - key: SikasHorn_Head
+      value: Chr_HelmetAttachment_04
+    - key: TempleMaster_Head
+      value: Chr_HelmetAttachment_11
