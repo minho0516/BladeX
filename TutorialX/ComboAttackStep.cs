@@ -11,7 +11,6 @@ namespace Swift_Blade
         private bool firstStepClear;
         ShinTutorialSystem shinTutorialSystem;
         private int currentStep = 0;
-        //이프문 여러개 만들어서 업데이트에서 여러개 퀘스트 돌리기러기하하하
 
         [SerializeField] private DialogueDataSO dg;
 

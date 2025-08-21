@@ -40,8 +40,6 @@ namespace Swift_Blade
                 finishedMove = true;
             }
 
-            //finishedMove = timer >= 3f; 이래하면 false가되노
-
             if (finishedMove)
             {
                 systemMing.TestCallback(0, true);

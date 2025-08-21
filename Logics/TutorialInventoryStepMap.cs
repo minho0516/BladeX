@@ -11,13 +11,11 @@ namespace Swift_Blade
 
         private void OnEnable()
         {
-            Debug.Log("튜토리얼인벤토리스텝맵 온이너블드");
             Instance = this;
         }
 
         private void OnDisable()
         {
-            Debug.Log("튜토리얼인벤토리스텝맵 온디스이너블드");
             Instance = null;
         }
 
