@@ -7,6 +7,8 @@ namespace Swift_Blade
     public class SecretWall : MonoBehaviour, IInteractable
     {
         private Vector3 offsetPos, offsetPos2;
+        [SerializeField] private Transform interactionIconTransform;
+
         private void Awake()
         {
             if(transform.eulerAngles.y == 0)
@@ -50,6 +52,11 @@ namespace Swift_Blade
         public void Interact()
         {
             Activate();
+        }
+
+        Transform IInteractable.InteractionIconTrasnform()
+        {
+            return interactionIconTransform;
         }
     }
 }

@@ -11,6 +11,7 @@ namespace Swift_Blade
 
         [Header("Curve")]
         [SerializeField] private AnimationCurve curve;
+        [SerializeField] private Transform interactionIconTransform;
 
         public void Interact()
         {
@@ -33,6 +34,11 @@ namespace Swift_Blade
             const float smallThan = 90;
 
             return playerPosBiggerthan ? new Vector3(0, biggerThan, 0) : new Vector3(0, smallThan, 0);
+        }
+
+        Transform IInteractable.InteractionIconTrasnform()
+        {
+            return interactionIconTransform;
         }
     }
 }
