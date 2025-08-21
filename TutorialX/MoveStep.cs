@@ -21,7 +21,7 @@ namespace Swift_Blade
             finishedMove = false;
             stopMing = false;
 
-            //systemMing = system;
+            systemMing = system;
 
             // 시작 시 실행
         }
@@ -35,7 +35,7 @@ namespace Swift_Blade
             if (velocity > 0.01f)
                 timer += Time.deltaTime;
 
-            if(timer >= 3f && stopMing == false)
+            if(timer >= 2.5f && stopMing == false)
             {
                 finishedMove = true;
             }
@@ -44,7 +44,7 @@ namespace Swift_Blade
 
             if (finishedMove)
             {
-                ShinTutorialSystem.stepQuestClearEvent?.Invoke();
+                systemMing.TestCallback(0, true);
                 finishedMove = false;
                 stopMing = true;
             }

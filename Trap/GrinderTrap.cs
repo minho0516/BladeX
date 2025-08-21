@@ -13,9 +13,8 @@ namespace Swift_Blade
 
         private void Update()
         {
-            float grinderSpeed = 50.0f;
-            Quaternion angle = grinder.rotation;
-            //grinder.rotation = angle * grinderSpeed;
+            float grinderSpeed = 150.0f;
+            grinder.Rotate(Vector3.left * grinderSpeed * Time.deltaTime);
         }
     }
 }

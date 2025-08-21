@@ -25,12 +25,13 @@ namespace Swift_Blade
         private void OpenDoor()
         {
             if (doorTrm == null) return;
+            Debug.Log("데스도어에서 오픈도어 함수 호출");
             doorTrm.DORotate(new Vector3(0, GetOpenDoorYRot(), 0), 2f);
             ShinTutorialSystem.stepDoorActiveEvent?.Invoke();
         }
         private void OpenDoorEffect()
         {
-            CameraShakeManager.Instance.DoShake(CameraShakeType.LeftRight);
+            //CameraShakeManager.Instance.DoShake(CameraShakeType.);
         }
 
         private float GetOpenDoorYRot()

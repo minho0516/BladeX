@@ -9,9 +9,11 @@ namespace Swift_Blade
         //private bool finishedRoll = false;
         public static bool IsRolled = false;
         private bool eventIsCalled = false;
+        private ShinTutorialSystem systemMing = null;
         public override void Enter(ShinTutorialSystem system)
         {
-            
+            eventIsCalled = false;
+            systemMing = system;
         }
 
         public override void Update()
@@ -20,7 +22,8 @@ namespace Swift_Blade
             if(IsRolled && eventIsCalled == false)
             {
                 //이벤트호출
-                ShinTutorialSystem.stepQuestClearEvent?.Invoke();
+                Debug.Log("RollingStep Update IsRolled is true, calling event");
+                systemMing.TestCallback(0);
                 eventIsCalled = true;
             }
         }

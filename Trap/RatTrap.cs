@@ -15,11 +15,11 @@ namespace Swift_Blade
         [SerializeField] private AnimationCurve easeCurveInactive;
 
         private bool isActive;
-        private float timer;
+        //private float timer;
 
         private void Awake()
         {
-            timer = 0;
+            //timer = 0;
         }
         private void ActiveTrap()
         {
