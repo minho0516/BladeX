@@ -24,22 +24,12 @@ namespace Swift_Blade
 
         private int currentStep = 0;
 
-        [Header("UIS")]
-        [SerializeField] private RectTransform currentQuestPanel;
-        [SerializeField] private CanvasGroup currentQuestCanvasGroup; // Fade 용
-        [SerializeField] private RectTransform nextQuestPanel;
-        [SerializeField] private CanvasGroup nextQuestCanvasGroup;
-        [SerializeField] private CanvasGroup fadePanelCanvasGroup;
-
         private Vector2 baseQuestPosition;
 
         public static Action stepDoorActiveEvent;
         public static Action stepQuestClearEvent;
 
         private bool hasStepEntered = false;
-
-        [Header("Key Panel")]
-        [SerializeField] private PanelX keyPanel;
 
         [Header("Tutorial Point Image")]
         [field : SerializeField] public Image pointImage;
@@ -321,53 +311,6 @@ namespace Swift_Blade
             //ActiveDoorAdvanceStep();
             DeathDoorActiveFadePanelCallback();
             //AnimateQuestTransition(statusSOs[currentStep].description);
-        }
-
-        public void QuestClearAnimation()
-        {
-            currentQuestPanel.DOScale(new Vector3(0, 0, 0), 1f);
-        }
-
-        public void AnimateQuestTransition(string nextQuestText)
-        {
-            float moveDistance = 100f;
-
-            //다시키우기
-            currentQuestPanel.DOScale(new Vector3(1, 1, 1), 1f);
-
-            // 위로 슉 사라지기
-            currentQuestPanel.DOAnchorPosY(baseQuestPosition.y + moveDistance, 0.4f)
-                .SetEase(Ease.InQuad);
-            currentQuestCanvasGroup.DOFade(0f, 0.3f);
-
-            // 다음 퀘스트 패널 위치 초기화 (아래)
-            nextQuestPanel.anchoredPosition = new Vector2(baseQuestPosition.x, baseQuestPosition.y - moveDistance);
-            nextQuestCanvasGroup.alpha = 0f;
-
-            // 텍스트 갱신
-            nextQuestPanel.GetComponentInChildren<TMP_Text>().text = nextQuestText;
-
-            // 아래에서 위로 올라오기
-            DOVirtual.DelayedCall(0.35f, () =>
-            {
-                nextQuestPanel.DOAnchorPosY(baseQuestPosition.y, 0.4f)
-                    .SetEase(Ease.OutQuad);
-                nextQuestCanvasGroup.DOFade(1f, 0.4f);
-
-                // 패널 교체
-                //SwapQuestPanels();
-            });
-        }
-
-        private void SwapQuestPanels()
-        {
-            var tempPanel = currentQuestPanel;
-            currentQuestPanel = nextQuestPanel;
-            nextQuestPanel = tempPanel;
-
-            var tempGroup = currentQuestCanvasGroup;
-            currentQuestCanvasGroup = nextQuestCanvasGroup;
-            nextQuestCanvasGroup = tempGroup;
         }
     }
 }
