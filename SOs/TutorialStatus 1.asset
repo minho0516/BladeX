@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2223506b26e96142935c55d006fc5b7, type: 3}
+  m_Name: TutorialStatus 1
+  m_EditorClassIdentifier: 
+  description: "\uAD6C\uB974\uAE30\uB85C \uBD88\uB369\uC774\uB97C \uC0C1\uCC98\uC5C6\uC774
+    \uC9C0\uB098\uAC00\uC138\uC694."
+  dialogue: {fileID: 11400000, guid: 1dfcc9aa59565114389190eda33d0465, type: 2}
+  stepLogic: {fileID: 11400000, guid: caad534fcf3027b49be0684887b3cccb, type: 2}
+  KeyGuideObj: {fileID: 7523174158628414144, guid: e1ab21fb965ab134cb4e3b17d8360179, type: 3}
+  itemReward: {fileID: 0}
+  tutorialStepMap: {fileID: 9140785021648897341, guid: c1e9fb8a9448cce46a915e50a4571511, type: 3}

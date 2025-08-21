@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace Swift_Blade
 {
+    [DefaultExecutionOrder(200)]
     public class WeaponOrb : BaseOrb<WeaponSO>
     {
         [SerializeField] private WeaponSO[] weapons;
@@ -12,6 +13,8 @@ namespace Swift_Blade
         [SerializeField] private PoolPrefabMonoBehaviourSO blastPrefab;
         protected override bool CanInteract => PlayerWeaponManager.CurrentWeapon != defaultItem;
         protected override IReadOnlyList<WeaponSO> GetReadonlyList => weapons;
+        public override IPlayerEquipable GetEquipable => defaultItem;
+
 
         protected override void Awake()
         {
@@ -20,6 +23,27 @@ namespace Swift_Blade
         }
         protected override void Initialize()
         {
+            WeaponSO currentPlayerWeapon = PlayerWeaponManager.CurrentWeapon;
+            IReadOnlyList<WeaponSO> list = GetReadonlyList;
+            int listCount = list.Count;
+            if (listCount > 1)
+            {
+                if (defaultItem == null || (currentPlayerWeapon != null && defaultItem == currentPlayerWeapon))
+                {
+                    int randomIndex = Random.Range(0, listCount);
+                    defaultItem = list[randomIndex];
+                    if (currentPlayerWeapon != null && defaultItem == currentPlayerWeapon)
+                    {
+                        int randomIndexExcludingCurrentWeapon = (randomIndex + Random.Range(1, listCount)) % listCount;
+                        defaultItem = list[randomIndexExcludingCurrentWeapon];
+                        Debug.Assert(defaultItem != currentPlayerWeapon, "player weapon and randomItem is same");
+                    }
+                }
+            }
+            else if (defaultItem == null)
+            {
+                defaultItem = list[0];
+            }
             weaponOrbParticle.SetWeapon(defaultItem);
         }
         protected override Tween InteractTween()

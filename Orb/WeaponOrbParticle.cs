@@ -24,6 +24,14 @@ namespace Swift_Blade
             }
             ps_model = Instantiate(weapon.PreviewMeshParticle, transform);
             ps_model.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+
+            Mesh previewMesh = weapon.PreviewMesh;
+            if (previewMesh != null)
+            {
+                ParticleSystemRenderer renderer = ps_model.GetComponent<ParticleSystemRenderer>();
+                Debug.Assert(renderer != null, "fail to get renderer");
+                renderer.mesh = previewMesh;
+            }
         }
         private void SetParticleColor(ParticleSystem particleSystem, Color color)
         {
